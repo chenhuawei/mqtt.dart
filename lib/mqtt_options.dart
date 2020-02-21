@@ -39,10 +39,11 @@ class MqttOptions {
   /// host = test.mosquitto.org
   /// port = 1234
   ///
-  MqttOptions.initFromConfig(String configFile)  {
-    new File(configFile).readAsLines()
-    .then((lines) => new Config.fromStrings(lines))
-    .then((Config config) => processConfig(config));
+  MqttOptions.initFromConfig(Config config)  {
+//    new File(configFile).readAsLines()
+//    .then((lines) => new Config.fromStrings(lines))
+//    .then((Config config) => processConfig(config));
+    processConfig(config);
   }
 
   void processConfig(config)
